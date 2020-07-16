@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</head>
+<style>
+    /* chapter 43-48 Task 1... */
+    .ppp{
+        font-weight: bold;
+    }
+
+    /* chapter 43-48 Task 2... */
+    .task2 img{
+        height: 150px; 
+        display: block;      
+    }
+    .col-3{
+        display: inline;
+    }
+    span{
+        margin-left: 50px;
+
+    }
+    /* chapter 43-48 Task 3... */
+    .table1{
+        width: 50%;
+    }
+    /* chapter 43-48 Task 5... */
+    .counth{
+        margin-left: 75px;
+        margin-top: 20px;
+    }
+    #data_table {
+    width: 50%;
+
+  }
+    
+</style>
+<body>
+    <!-- chapter 43-48 Task 1... -->
+    <div class="ppp">
+        <p>chapter 43-48 Task 1...</p>
+        <button id="btn" onclick="clickalert()">Click</button>
+    </div>
+
+     <!-- chapter 43-48 Task 2... -->
+ <p class="ppp">chapter 43-48 Task 2...</p>
+ <div class="container tast2">
+    <div class="row">
+         <div class="col-3" onclick="purchasealert()">
+             <img src="assets/oppoA92.jpg" alt="oppoA92.jpg" class="img-fluid">
+             <span>Oppo A92</span>
+         </div>
+         <div class="col-3 oppoa9" onclick="purchasealert()">
+             <img src="assets/huaweinova7i.jpg" alt="huaweinova7i.jpg" class="img-fluid">
+             <span>Huawei Nova 7i</span>
+         </div>
+         <div class="col-3" onclick="purchasealert()">
+             <img src="assets/samsunggalaxya21s.jpg" alt="samsunggalaxya21s.jpg" class="img-fluid">
+             <span>Samsung Galaxy A21s</span>
+         </div>
+         <div class="col-3" onclick="purchasealert()">
+             <img src="assets/realmex3.jpg" alt="realmex3.jpg" class="img-fluid">
+             <span>Realme X3</span>
+         </div>
+        </div>
+ </div>
+
+     <!-- chapter 43-48 Task 3... -->
+     <p class="ppp">chapter 43-48 Task 3...</p>
+
+     <table class="table table1" id="myTable">
+        <thead class="thead-light">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Class</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody >
+          <tr>
+            <th scope="row">1</th>
+            <td>John</td>
+            <td>10</td>
+            <td> <input type="button" value="Delete" onclick="deleteRow(this)"></td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Doe</td>
+            <td>9</td>
+            <td><input type="button" value="Delete" onclick="deleteRow(this)"></td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>james</td>
+            <td>8</td>
+            <td><input type="button" value="Delete" onclick="deleteRow(this)"></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- chapter 43-48 Task 4... -->
+     <p class="ppp">chapter 43-48 Task 4...</p>
+
+     <img src="assets/mouse.jpg" onMouseover="src='assets/mouseover.jpg'" onMouseout="src='assets/mouse.jpg'">
+
+    <!-- chapter 43-48 Task 5... -->
+    <p class="ppp">chapter 43-48 Task 5...</p>
+      
+    <h2 id="count" class="counth">0</h2>
+    <button type="button" class="btn btn-secondary" onclick="increase()">Increace</button>
+    <button type="button" class="btn btn-secondary"  onclick="decrease()">Decrease</button> 
+
+    <p class="ppp">chapter 43-48 End...</p>
+    <!-- chapter 43-48 end... -->
+
+    <h1 class="text-center"> chapter 49-52 Events </h1>
+    <!-- chapter 49-52 Task 1... -->
+    <div class="ppp">
+        <p>chapter 49-52 Task 1...</p>
+    </div>
+        <!-- task coding in form.html file -->
+        <p>Click This Link <a href="form.html">form task</a></p>       
+        <br>
+
+     <!-- chapter 49-52 Task 2... -->
+    <div class="ppp">
+        <p>chapter 49-52 Task 2...</p>
+    </div>
+
+    <p id="pera">
+         Lorem ipsum dolor sit amet consectetur adipisicing elit. <a href="javascript:void(0)" onclick="read more()"> read more</a>
+        
+    </p> 
+    <script>
+        function readmore(){
+        var text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id quos dolores deleniti? Dolores ipsam assumenda incidunt fuga culpa cum ab, eum libero odit eligendi reprehenderit facere commodi neque qui consectetur? Aspernatur, natus consectetur commodi rerum, aperiam molestias laudantium corrupti explicabo, alias expedita error facilis ex quod. Voluptatum quam reiciendis impedit minima nam.";
+
+        var pera=document.getElementById('pera');
+        pera.innerHTML = text;
+        }
+    </script>
+
+    <!-- chapter 49-52 Task 3... -->
+    <p class="ppp">chapter 49-52 Task 3...</p>
+
+    <table class="table table1 text-center" id="data_table" align="center">
+        <thead class="thead-light">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Class</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="row1">
+            <th scope="row" id="s_row1">1</th>
+            <td  id="name_row1">John</td>
+            <td id="class_row1">10</td>
+            <td>
+              <input type="button" id="edit_button1" value="Edit" class="edit" onclick="edit_row('1')">
+              <input type="button" id="save_button1" value="Save" class="save" onclick="save_row('1')">
+              <input type="button" value="Delete" class="delete" onclick="delete_row('1')">
+            </td>
+          </tr>
+          <tr class="row2" >
+            <th scope="row" id="s_row2">2</th>
+            <td  id="name_row2">Doe</td>
+            <td id="class_row2">9</td>
+            <td>
+              <input type="button" id="edit_button2" value="Edit" class="edit" onclick="edit_row('2')">
+              <input type="button" id="save_button2" value="Save" class="save" onclick="save_row('2')">
+              <input type="button" value="Delete" class="delete" onclick="delete_row('2')">
+            </td>
+          </tr>
+          <tr class="row3">
+            <th scope="row" id="s_row3">3</th>
+            <td  id="name_row3">james</td>
+            <td id="class_row3">8</td>
+            <td>
+              <input type="button" id="edit_button3" value="Edit" class="edit" onclick="edit_row('3')">
+              <input type="button" id="save_button3" value="Save" class="save" onclick="save_row('3')">
+              <input type="button" value="Delete" class="delete" onclick="delete_row('3')">
+            </td>
+          </tr>
+          <tr>
+            <td><input type="text" id="new_s"></td>
+            <td><input type="text" id="new_name"></td>
+            <td><input type="text" id="new_class"></td>
+            <td><input type="button" class="add" onclick="add_row();" value="Add Row"></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- chapter 49-52 Task 3 End... -->
+
+      <!-- Chapter 58-67 -->
+      <p class="ppp">Chapter 58-67 Tasks...</p>
+
+      <p> All The Task of Chapter 58-67 are Here -> Click This Link -> <a href="domchap58-67.html" target="_blank">form task</a></p>  
+
+
+      
+         <!-- Chapter 58-67 -->
+      <p class="ppp">Chapter 52-57 Tasks...</p>
+
+      <p> All The Task of Chapter 52-57 are Here -> Click This Link -> <a href="modal.html" target="_blank">Image-Gallery or LightBox</a></p>  
+
+
+
+
+
+</body>
+<script src="app.js"></script>
+</html>

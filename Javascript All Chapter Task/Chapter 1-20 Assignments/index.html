@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="app.js" ></script> 
+	<script></script><!-- Task 7. Practice placement of script tag -->
+
+	<style>
+		table{
+			text-align: center;
+		}
+		th {
+
+			padding: 10px;
+		}
+
+		td {
+
+			padding: 10px;
+		}
+	</style>
+</head>
+<script></script>  <!-- Task 7. Practice placement of script tag -->
+
+<body>
+
+	<p id="demo"></p>
+
+	<p><b><br><br>__Chapter 6-9. Math Expression task 5. __<br></b></p>
+	<h1>User Input Marksheet</h1>
+	<div id="markSheet"></div>
+	<script>
+		    // Initializing arrays and varaible
+		    var users = ['English', 'Urdu', 'Math'];
+		    var obtainMarks = [45, 38, 86];
+		    var totalMarks =100;
+
+
+		    var percentage = [(obtainMarks[0]/totalMarks)*100, (obtainMarks[1]/totalMarks)*100, (obtainMarks[2]/totalMarks)*100];
+
+
+    // Getting output element
+    var output = document.getElementById('markSheet');
+
+    // Creating table tags
+    var table = "<table><tr><th>Subject</th><th>Total  Marks</th><th>Obtain Marks</th><th>Percentage</th></tr>";
+
+    for (var i = 0; i < users.length; i++) {
+    	table += "<tr><td>" + users[i] + "</td><td>" + totalMarks + "</td><td>" + obtainMarks[i] + "</td><td>" + percentage[i] + "%</td></tr>";
+    }
+
+    table += "</table>";
+
+    output.innerHTML = table;
+
+</script>
+
+
+<script>
+	document.getElementById("demo").innerHTML = "▬▬▬▬▬▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬▬▬▬▬▬";
+</script>
+
+<script></script> <!-- Task 7. Practice placement of script tag -->
+</body>	
+</html>

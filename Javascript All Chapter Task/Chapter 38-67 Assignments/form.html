@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up Form</title>
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+<!-- Font-awesome -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+    .front-signup{
+        margin:25px 0 20px 120px;
+    }
+    i,small{
+        margin:0 5px 0 2px;
+    }
+</style>
+<body>
+
+    
+    <div class="contaienr">
+
+        <h2>Chapter 49-52 Task 1 Get Registeration Form Data</h2>
+        <button class="btn btn-success front-signup" data-target="#mymodal" data-toggle="modal" >Sign up Here</button>
+
+        <div class="modal fade" id="mymodal">
+            <div class="modal-dialog modal-dialog-center">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <h3 class="text-center text-primary">SignUp</h3>
+                        <button type="button" class="close" data-dismiss="modal">   &times;
+                        </button>
+                    </div>
+                        <div class="modal-body">
+                            <div class="submit">
+                            <form action="submit">
+                                <div class="form-group">
+                                    <i class="fa fa-user fa-2x"></i>
+                                    <label for="userid">
+                                      Username</label>
+                                    <input type="text" name="userid" class="form-control" placeholder="Enter Username" id="userid" required >
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label for="email"><i class="fa fa-envelope fa-2x"></i>
+                                      Email</label>
+                                    <input type="email" id="eml" name="email" aria-describedby="emailHelp" class="form-control" placeholder="Enter Email" required>
+                                    <small id="emailHelp" class="form-text text-muted">enter valid email</small>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label for="password"><i class="fa fa-lock fa-2x"></i>
+                                      Password</label>
+                                    <input type="password" id="pswd" name="password" class="form-control" placeholder="Enter Password" required>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                    
+
+                        <div class="modal-footer justify-content-center">
+                            <button class="btn btn-danger " type="submit" onclick="getData()">Sign Up</button>
+                       
+                     
+                            <button class="btn btn-danger " data-dismiss="modal">Close</button>
+                        </div>
+                    
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script>
+        function getData(){
+            var name=document.getElementById("userid");
+            var email=document.getElementById("eml");
+            var pswd=document.getElementById("pswd");
+            
+            document.write(  "<h3> Usernamer  : " + name.value +"</h3>");  
+            document.write(  "<h3> Email : " + email.value +"</h3>");  
+            document.write(  "<h3> Password : " + pswd.value +"</h3>");  
+           
+        }
+
+       
+    </script>
+
+</body>
+</html>

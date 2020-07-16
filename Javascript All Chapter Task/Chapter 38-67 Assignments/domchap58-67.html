@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Chapter 58-67</title>
+</head>
+
+<body>
+    <h1 style="text-align:center">Chapter 58-67 DOM</h1>
+
+    <!-- minify code -->
+    <div> <h1>DOM</h1><div id="form-content" class="content"><label  for="first-name">First Name</label><input type="text" id="first-name"/> <label for="last-name">Last Name</label><input type="text" id="last-name"/><label for="email">Email</label><input type="text" id="email"/> </div><div id="main-content" class="content"><p class="render"> First Name : Alex</p><p class="render" id=lastName>Last Name: Bank</p><p class="render"> Email : alexbank@example.com</p><p class="render">Country : Pakistan</p><p class="render">contact : +92 300 1234567</p></div></div>
+
+    <button onclick='setValuefn()'>Task4. Set value in first-name</button>
+    <br><br>
+    <button onclick='setValueln()'>Task5. repeat 4 in last-name</button>
+    <button onclick='setValueeml()'>Task5. repeat 4 in Email</button>
+    <br><br>
+    <button onclick='updteChil()'>question 2 task 3 Update child node of last name</button>
+
+
+    <!-- original code -->
+    <!-- <div>
+        <h1> DOM </h1>
+        <div id="form-content" class="content">
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name" />
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name" />
+            <label for="email">Email</label>
+            <input type="text" id="email" />
+        </div>
+        <div id="main-content" class="content">
+            <p class="render"> First Name : Alex</p>
+            <p class="render" id=lastName>Last Name: Bank</p>
+            <p class="render"> Email : alexbank@example.com</p>
+            <p class="render"> Country : Pakistan </p>
+            <p class="render"> contact : +92 300 1234567</p>
+        </div>
+    </div> -->
+    
+    <script>
+        //task 1.
+       var mainContent_data= document.getElementById("main-content");
+       //task 2.
+       console.log(mainContent_data.childNodes);
+
+       //task 3.
+       var render=document.getElementsByClassName('render');
+       document.write("<br><br> Task 3. writing inner html of render class childs <br><br>");
+        for(var i=0 ;i<render.length ;i++){
+            var result=render[i].innerText
+            document.write(result +"<br>");
+        }
+
+        //task 4.
+        function setValuefn(){
+            document.getElementById('first-name').value='first name value to be set';
+        }
+
+        //task 5.
+        function setValueln(){
+            document.getElementById('last-name').value='last name value to be set';
+        }
+        function setValueeml(){
+            document.getElementById('email').value='email value to be set';
+        }
+
+        //question 2 task 1.
+        var ntype= document.getElementById("main-content").nodeType;
+        document.write("<br>question 2 task 1 : node type of main-content is : " + ntype);
+
+        //question 2 task 2.
+        var ntype2= document.getElementById("lastName").nodeType;
+        var chiln=document.getElementById('lastName').childNodes;
+        document.write("<br>question 2 task 2 : node type of lastName is : " + ntype2);
+        document.write("<br>question 2 task 2 : child nodes of lastName is : shown in console ");
+        console.log("child nodes of lastName is : " );
+        console.log(chiln)
+
+
+        //question 2 task 3.
+        document.write("<br>question 2 task 3 : UpdateUpdate child node of element having id 'lastName' ")
+        
+        //document.getElementById('lastName').childNodes[0].innerText = "Shaikh Updated Q2. task 3";
+        function updteChil() {
+            document.getElementById("lastName").innerHTML = "Shaikh Updated Q2. task 3";
+    
+        }
+
+
+        //question 2 task 4.
+        var firstChil = document.getElementById('main-content').firstChild;
+        var lastChil = document.getElementById('main-content').lastChild;
+
+        document.write("<br> <br> question 2 task 4  Check In Console...");
+        console.log("question 2 task 4 ");
+        console.log("first Child of main-content is  :")
+        console.log(firstChil);
+        console.log("last Child of main-content is  :")
+        console.log(lastChil);
+
+
+        //question 2 task 5.
+
+        var ln_nextsib=document.getElementById("lastName").nextSibling;
+        var ln_presib=document.getElementById("lastName").nextpreviousSibling;
+        
+        document.write("<br> <br> question 2 task 5  Check In Console...");
+        console.log(" question 2 task 5 ");
+        console.log("next sibling of lastName ");
+        console.log(ln_nextsib);
+        console.log("Previous sibling of lastName ");
+        console.log(ln_presib);
+
+
+        //question 2 task 6.
+        var parent_email=document.getElementById("email").parentNode;
+        document.write("<br> <br> question 2 task 6  Check In Console...");
+        console.log(" question 2 task 6 ");
+
+        console.log("Parent Node of email is ");
+        console.log(parent_email);
+
+        console.log("Node Type is of email is ");
+        var ntype= document.getElementById("email").nodeType;
+        console.log(ntype);
+
+
+         
+
+
+
+
+
+      
+
+    </script>
+
+</body>
+
+</html>
